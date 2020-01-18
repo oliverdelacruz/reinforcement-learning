@@ -1,4 +1,4 @@
-# Kaggle
+# Reinforcement Learning Methods For Autonomous Exploration
 
 This repo is part of the research done with Physics ETH department regarding reinforcement learning for autonmous vechicles. 
 
