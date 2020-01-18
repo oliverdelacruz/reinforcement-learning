@@ -5,9 +5,12 @@ from boto.s3.connection import S3Connection
 from filechunkio import FileChunkIO
 
 # Constanst variables
-KEY = 'username'
-PWD = 'password'
-BUCKET = 'bucket'
+KEY = 'AKIAJUCKLBAF2TYNZ7IQ'
+PWD = 'aZjhbof3dSbOzEG6qEzxn/ZWruoTSrSpCOsdgV+N'
+BUCKET = 'oliverdelacruz'
+PATHS = ['/home/ubuntu/minecraft/logs', '/home/ubuntu/scalable_agent/logs']
+# PATHS = ['/home/ubuntu/minecraft/logs', '/home/ubuntu/scalable_agent/logs' ]
+# PATHS = ['/home/deoliver/minecraft/logs', '/home/deoliver/scalable_agent/logs' ]
 
 # Check available buckets
 conn = S3Connection(KEY, PWD)

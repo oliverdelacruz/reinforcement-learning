@@ -6,11 +6,11 @@ from boto.exception import S3ResponseError
 import re
 
 # Constanst variables
-KEY = 'username'
-PWD = 'password'
-BUCKET = 'bucket'
-PATHS = ['/home/ubuntu/']
-
+KEY = 'AKIAJUCKLBAF2TYNZ7IQ'
+PWD = 'aZjhbof3dSbOzEG6qEzxn/ZWruoTSrSpCOsdgV+N'
+BUCKET = 'oliverdelacruz'
+PATHS = ['/home/ubuntu/scalable_agent']
+PATHS = ['/home/deoliver/scalable_agent/logs']
 
 #PATHS = ['C:\Thesis\scalable_agent\logs']
 # Check available buckets

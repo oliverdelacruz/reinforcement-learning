@@ -1,3 +1,17 @@
+# Copyright 2018 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 """Configuration Parameters"""
 # Python 2.X and 3.X compatibility
 from __future__ import absolute_import
@@ -8,7 +22,7 @@ from __future__ import print_function
 import tensorflow as tf
 
 flags = tf.app.flags
-flags.DEFINE_string('logdir', './logs/agent' , 'TensorFlow log directory.')
+flags.DEFINE_string('logdir', '/home/ubuntu/scalable_agent/logs/agent' , 'TensorFlow log directory.')
 flags.DEFINE_enum('mode', 'train', ['train', 'test'], 'Training or test mode.')
 
 # Flags used for testing.
@@ -39,9 +53,15 @@ flags.DEFINE_float('lmbda', .1, 'Coefficient for the .')
 flags.DEFINE_float('beta', .2, 'Coefficient for the tradeoff between the inverse or forward model.')
 
 # Environment settings.
+flags.DEFINE_string( 'dataset_path', '',
+    'Path to dataset needed for psychlab_*, see '
+    'https://github.com/deepmind/lab/tree/master/data/brady_konkle_oliva2008')
 flags.DEFINE_string('level_name', 'explore_object_locations_small',
                     '''Level name or \'dmlab30\' for the full DmLab-30 suite '''
                     '''with levels assigned round robin to the actors.''')
+
+# flags.DEFINE_integer('width', 96, 'Width of observation.')
+# flags.DEFINE_integer('height', 72, 'Height of observation.')
 flags.DEFINE_integer('width', 84, 'Width of observation.')
 flags.DEFINE_integer('height', 84, 'Height of observation.')
 
